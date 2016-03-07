@@ -55,22 +55,15 @@ def sum_series(n, a=0, b=1):
 
 
 if __name__ == "__main__":
-    print(u"This module defines functions that implement mathematical series")
-    print(u"")
-    print(u"The first series of 'iterative' functions operate the same way as their \
-        non-iterative counterparts. The two series' of functions are just \
-        built in different ways.")
-    print(u"")
-    print(u"fibonacci(n):")
-    print(fibonacci.__doc__)
-    print(u"fibonacci(5) would return %s" % fibonacci(5))
-    print(u"")
-    print(u"lucas(n):")
-    print(lucas.__doc__)
-    print(u"lucas(5) would return %s" % lucas(5))
-    print(u"")
-    print(u"sum_series(n):")
-    print(sum_series.__doc__)
-    print(u"Without optional args, sum_series returns fibonacci(n)")
-    print(u"sum_series(8, 6, 7) would return %s" % sum_series(8, 6, 7))
-    print(u"")
+    print("""This module defines functions that implement various mathematical series\n
+    The first series of 'iterative' functions operate the same way as their
+    non-iterative counterparts. The two series' of functions are just
+    built in different ways.\n\n
+    fibonnaci(n): {}
+        fibonacci(5) would return {} \n\n
+    lucas(n): {}
+        lucas(5) would return {} \n\n
+    sum_series(n): {}
+        Without optional args, sum_series returns fibonacci(n)\n
+        sum_series(8, 6, 7) would return {} \n\n
+    """).format(fibonacci.__doc__, fibonacci(5), lucas.__doc__, lucas(5), sum_series.__doc__, sum_series(8, 6, 7))
