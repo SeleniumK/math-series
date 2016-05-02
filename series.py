@@ -11,7 +11,6 @@ def sum_sequence_iterative(n, a=0, b=1):
             a = b
             b = c
             c = a + b
-            print(a, b, c)
         return c
 
 
@@ -51,7 +50,7 @@ def sum_series(n, a=0, b=1):
     elif n == 2:
         return b
     else:
-        return sum_series(n - 1) + sum_series(n - 2)
+        return sum_series(n - 1, a, b) + sum_series(n - 2, a, b)
 
 
 if __name__ == "__main__":
@@ -66,4 +65,4 @@ if __name__ == "__main__":
     sum_series(n): {}
         Without optional args, sum_series returns fibonacci(n)\n
         sum_series(8, 6, 7) would return {} \n\n
-    """).format(fibonacci.__doc__, fibonacci(5), lucas.__doc__, lucas(5), sum_series.__doc__, sum_series(8, 6, 7))
+    """.format(fibonacci.__doc__, fibonacci(5), lucas.__doc__, lucas(5), sum_series.__doc__, sum_series(8, 6, 7)))

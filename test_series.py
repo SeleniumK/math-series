@@ -42,3 +42,11 @@ def test_fibonacci(n, c):
 def test_lucas(n, c):
     from series import lucas
     assert lucas(n) == c
+
+
+def test_sum_series():
+    from series import sum_series
+    assert sum_series(1, 6, 7) == 6
+    assert sum_series(2, 6, 7) == 7
+    assert sum_series(3, 6, 7) == 13
+    assert sum_series(8, 6, 7) == 139
